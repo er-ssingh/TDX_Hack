@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>GCaN+W62sE+7GSZmgOb55wo24UL1+eY62qJyjj0lfgI=_1</activeVersionIdentifier>
+    <developerName>JourneyConfirmation</developerName>
+    <masterLabel>JourneyConfirmation</masterLabel>
+    <templateVersions>
+        <content>Role: Robotic Car Order Management Agent
+Task: Compose a professional yet friendly email notification to inform the customer their robotic car order has been completed and include the invoice.
+Format: Email with clear structure, warm tone, and attachment reference.
+Instructions:
+Address the customer by name {!$Input:Order.Customer_First_Name__c}
+Confirm completion of their robotic car order {!$Input:Order.Name} with enthusiasm.
+Mention the attached invoice for their records.
+Include a welcoming closing line inviting them to return for future purchases.
+Use a tone that balances professionalism with approachability (e.g., &quot;We’re thrilled to...&quot; or &quot;It’s been a pleasure...&quot;).
+You could also 
+
+DO NOT CREATE A SUBJECT 
+
+Here is our company information
+Your name is NexusBot
+Company Name : {!$Organization.Name}
+
+</content>
+        <inputs>
+            <apiName>Order</apiName>
+            <definition>SOBJECT://Robotic_Car_Order__c</definition>
+            <masterLabel>Order</masterLabel>
+            <referenceName>Input:Order</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>GCaN+W62sE+7GSZmgOb55wo24UL1+eY62qJyjj0lfgI=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

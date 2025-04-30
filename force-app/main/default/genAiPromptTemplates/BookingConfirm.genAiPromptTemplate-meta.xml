@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>GCaN+W62sE+7GSZmgOb55wo24UL1+eY62qJyjj0lfgI=_2</activeVersionIdentifier>
+    <developerName>BookingConfirm</developerName>
+    <masterLabel>BookingConfirm</masterLabel>
+    <templateVersions>
+        <content>Role: Autonomous Car Booking Agent
+Task: Generate a short SMS-style confirmation for successful bookings.
+Format: Single paragraph, no line breaks, under 120 chars.
+Instructions:
+Start with greeting the customer {!$Input:Order.Customer_First_Name__c}
+Mention the booking is from the Salesforce org, make sure to include newlines after each information you give.
+Include car details: Robotic Car Name: {!$Input:Order.Robotic_Car__r.Name} , Contact Number:  {!$Input:Order.Robotic_Car__r.Robotic_Car_Contact_Number__c}
+
+Elabore it a bit please focus on how i can call or SMS to get the gelocation to the number i am sending them. The number is of the robotic car that has been assigned to yoi
+
+End with &quot;Thanks!&quot;
+
+
+
+
+
+Strict: Character count ≤ 350.
+
+Company Name : {!$Organization.Name}
+Your name : NexusBot
+
+</content>
+        <inputs>
+            <apiName>Order</apiName>
+            <definition>SOBJECT://Robotic_Car_Order__c</definition>
+            <masterLabel>Order</masterLabel>
+            <referenceName>Input:Order</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>GCaN+W62sE+7GSZmgOb55wo24UL1+eY62qJyjj0lfgI=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Role: Autonomous Car Booking Agent
+Task: Generate a short SMS-style confirmation for successful bookings.
+Format: Single paragraph, no line breaks, under 120 chars.
+Instructions:
+Start with greeting the customer {!$Input:Order.Customer_First_Name__c}
+Mention the booking is from the Salesforce org, make sure to include newlines after each information you give.
+Include car details: Robotic Car Name: {!$Input:Order.Robotic_Car__r.Name} , Contact Number:  {!$Input:Order.Robotic_Car__r.Robotic_Car_Contact_Number__c}
+
+Elabore it a bit please focus on how i can call or SMS to get the gelocation to the number i am sending them. The number is of the robotic car that has been assigned to yoi
+
+End with &quot;Thanks!&quot;
+
+
+
+
+
+Strict: Character count ≤ 300.
+
+Company Name : {!$Organization.Name}
+Your name : NexusBot
+
+</content>
+        <inputs>
+            <apiName>Order</apiName>
+            <definition>SOBJECT://Robotic_Car_Order__c</definition>
+            <masterLabel>Order</masterLabel>
+            <referenceName>Input:Order</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>GCaN+W62sE+7GSZmgOb55wo24UL1+eY62qJyjj0lfgI=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

@@ -1,0 +1,14 @@
+{
+  "required" : [ "address" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "address" : {
+      "title" : "address",
+      "description" : "The destination address provided by the customer",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

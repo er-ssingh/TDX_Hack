@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Geocodes address and updates the Contact with matching Registered Account Number.</description>
+    <invocationTarget>ContactGeoUpdaterFlow</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Update Contact Geolocation</masterLabel>
+    <progressIndicatorMessage>Processing your Location...</progressIndicatorMessage>
+</GenAiFunction>

@@ -1,0 +1,28 @@
+{
+  "required" : [ "contactId", "latitude", "longitude" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "contactId" : {
+      "title" : "contactId",
+      "description" : "The ContactId of the Current Contact",
+      "lightning:type" : "lightning__recordIdType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "latitude" : {
+      "title" : "latitude",
+      "description" : "The destination Latitude Which you retrieved from \"Return Destination Geo-Coordinates\" Action",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "longitude" : {
+      "title" : "longitude",
+      "description" : "The destination longitude Which you retrieved from \"Return Destination Geo-Coordinates\" Action",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

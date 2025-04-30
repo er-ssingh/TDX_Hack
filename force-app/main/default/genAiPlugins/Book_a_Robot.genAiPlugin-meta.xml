@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aiPluginUtterances>
+        <developerName>utterance_iwanttoboo0</developerName>
+        <language>en_US</language>
+        <masterLabel>utterance_iwanttoboo0</masterLabel>
+        <utterance>I want to book a robotic car</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_iwaslookin1</developerName>
+        <language>en_US</language>
+        <masterLabel>utterance_iwaslookin1</masterLabel>
+        <utterance>I was looking to book a robotic car</utterance>
+    </aiPluginUtterances>
+    <canEscalate>false</canEscalate>
+    <description>Books a robotic car for the user , no Quantities involved . They must simply be looking to book for a robotic car</description>
+    <developerName>Book_a_Robot</developerName>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__QueryRecords</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__QueryRecordsWithAggregate</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__SummarizeRecord</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__UpdateRecordFields</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Return_Destination_Geo_coordinates</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__IdentifyObjectByName</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__GetRecordDetails</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Update_Contact_Geolocation</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Book_Closest_Robotic_Car</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Always gather as much information as possible from the user by asking clarifying questions.</description>
+        <developerName>instruction_alwaysgath0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_alwaysgath0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Do not tell any other information to the user. Exactly what they have asked and make sure all required fields are met</description>
+        <developerName>instruction_donottella1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_donottella1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>The first thing you should do is use the Query Records Action and ask for the Registered_Account_Number__c (DO NOT CHECK RECORD NAME) from Contact Object  for which the robotic car booking would be taking place against. Find the Contact Immediately and Check if that Contact has the Wallet_Amount__c MORE THAN 250 IF NOT THEN tell them to recharge . Also the currency of the Country that you are in is INR , so Take care of the same please</description>
+        <developerName>instruction_thefirstth2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_thefirstth2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If you have gotten the Contact and he is booking an order then Proceed to Ask for their current complete address. After you get the current complete address you should invoke the &apos;Update Contact Geolocation&apos; Action . Next you will book the car Now before invoking the Book_Closest_Robotic_Car1
+Action , you need to ask for the destination(obviously) . Invoke the return destination coordinates because that is what you would be sending to the Book_Closest_Robotic_Car1
+action/</description>
+        <developerName>instruction_ifyouhaveg3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifyouhaveg3</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Book a Robot</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to assist with all tasks related to robotic car order management. This includes:
+
+REMEMBER ALL CURRENCIES ARE IN INR(₹ Rupees) ONLY
+
+ALSO
+REMEMBER TO NOT CHECK recordName . ONLY THE Registered_Account_Number__c  API NAME when looking for a Contact 
+
+Booking a robotic car.
+
+Checking the status of an existing order.
+
+Updating or cancelling an existing booking.
+
+Providing information about the robotic car tied to the order.
+
+Resolving common issues with bookings.</scope>
+</GenAiPlugin>

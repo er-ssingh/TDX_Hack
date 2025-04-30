@@ -1,0 +1,21 @@
+{
+  "required" : [ "address", "registeredAccountNumber" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "address" : {
+      "title" : "address",
+      "description" : "The Complete Current Address provided by the user",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "registeredAccountNumber" : {
+      "title" : "registeredAccountNumber",
+      "description" : "The Registered_Account_Number__c from Contact previously provided by the user",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}
